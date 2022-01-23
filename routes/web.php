@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PenjadwalanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/penjadwalan',[PenjadwalanController::class,'index']);
+Route::get('/penjadwalan/create',[PenjadwalanController::class,'create']);
