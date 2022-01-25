@@ -22,6 +22,7 @@
         <th>tgl sidang</th>
         <th>ruang sidang</th>
         <th>semester</th>
+        <th>Aksi</th>
     </tr>
     @foreach ($jadwal as $item)
     <tbody>
@@ -32,6 +33,9 @@
             <td>{{ $item->tgl_sidang }}</td>
             <td>{{ $item->ruang_sidang }}</td>
             <td>{{ $item->semester }}</td>
+            <td> <a href="/penjadwalan/{{ $item->id }}/edit" class="href">Edit</a> ||
+                <a href="/penjadwalan/{{ $item->id }}/delete" class="href">Delete</a>
+            </td>
         </tr>
     </tbody>
 

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PenjadwalanController;
+use App\Models\Penjadwalan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,12 @@ Route::get('/', function () {
 
 Route::get('/penjadwalan',[PenjadwalanController::class,'index']);
 Route::get('/penjadwalan/create',[PenjadwalanController::class,'create']);
+Route::get('/penjadwalan/store',[PenjadwalanController::class,'store']);
+Route::get('penjadwalan/{id}/edit',[PenjadwalanController::class,'edit']);
+Route::post('penjadwalan/{id}/update',[PenjadwalanController::class,'update']);
+Route::get('penjadwalan/{id}/delete',[PenjadwalanController::class,'delete']);
+
+Route::get('/login',[AuthController::class,'login']);
+Route::post('/postlogin',[AuthController::class,'authenticate'] );
+Route::get('/logout',[AuthController::class,'logout'] );
+
