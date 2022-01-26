@@ -15,6 +15,17 @@ class PenjadwalanController extends Controller
         return view('penjadwalan.paa.index', ['jadwal'=>$jadwal] );
     }
 
+
+    public function jadwalMahasiswa(){
+        $jadwal = Penjadwalan::all();
+        return view('penjadwalan.mahasiswa.index',['jadwal'=>$jadwal]);
+    }
+
+    public function jadwalDosen(){
+        $jadwal = Penjadwalan::all();
+        return view('penjadwalan.dosen.index',['jadwal'=>$jadwal]);
+    }
+
     public function create(){
         $data['listDosen'] = User::whereHas('role', function ($query) {
             $query->where('jenis_role', 'Dosen');

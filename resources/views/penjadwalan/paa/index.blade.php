@@ -5,6 +5,8 @@
 <div class="row">
     <div class="col-md-6">
         <h1>Jadwal</h1>
+        <h1>Login Sebagai:
+            {{ Auth::user()->nama }}</h1>
     </div>
     <div class="col-md-6">
         <a href="/penjadwalan/create" class="btn btn-dark float-right">
