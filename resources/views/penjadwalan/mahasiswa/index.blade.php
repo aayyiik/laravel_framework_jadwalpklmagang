@@ -4,8 +4,6 @@
 @section('content')
 
         <h1>Jadwal</h1>
-        <h1>Login Sebagai:
-           {{ Auth::user()->name }}</h1>
     
     <br>
     <br>
