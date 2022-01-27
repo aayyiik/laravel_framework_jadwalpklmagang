@@ -4,25 +4,23 @@
 @include('templates.partials.head')
 
 <body>
-    <div class="wrapper">
 
-        
+    <div id="wrapper">
+ 
+       <div class="main-panel">
+            @include('templates.partials.top_nav')
 
-        <div class="main-panel">
-
-           
             <div class="content">
                 <div class="container-fluid">
                     @yield('content')
                 </div>
             </div>
 
-          
+            @include('templates.partials.footer')
         </div>
-    </div>
-
-</body>
+    
 
 @include('templates.partials.script')
-
+    </div>
+</body>
 </html>
