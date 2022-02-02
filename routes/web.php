@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PenjadwalanController;
-use App\Models\Penjadwalan;
 use Illuminate\Support\Facades\Route;
 
 /*
